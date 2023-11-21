@@ -1,40 +1,13 @@
 <div class="container d-flex justify-content-between tamanho">
-    <div class="card" style="width: 18rem;">
-        <img src="../../assets/cafe.jpg" class="card-img-top" alt="...">
+    <div class="card" style="width: 18rem;" *ngFor="let p of produtos">
+        <img src="{{p.img}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Cafe</h5>
-          <p class="card-text"></p>
+          <h5 class="card-title">{{p.nome}}</h5>
+          <h5 class="card-title">{{p.valor | currency : 'BRL'}}</h5>
+          <p class="card-text">{{p.descricao}}</p>
             <a href="#" class="btn btn-primary container-fluid"(click)="Comprar()">Compre-já</a>
         </div>
       </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="../../assets/pao.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Pão</h5>
-          <p class="card-text"></p>
-            <a href="#" class="btn btn-primary container-fluid"(click)="Comprar()">Compre-já</a>
-        </div>
-        </div>
-
-
-        <div class="card" style="width: 18rem;">
-            <img src="../../assets/toddy.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Toddy</h5>
-              <p class="card-text"></p>
-                <a href="#" class="btn btn-primary container-fluid"(click)="Comprar()">Compre-já</a>
-            </div>
-        </div>
-        
-        <div class="card" style="width: 18rem;">
-            <img src="../../assets/leite.jpg_v=637925607854630000" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Leite</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn btn-primary container-fluid"(click)="Comprar()">Compre-já</a>
-            </div>
-        </div>
 </div>
 
 
